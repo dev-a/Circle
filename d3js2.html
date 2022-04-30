@@ -72,12 +72,9 @@ var svg = d3.select("body").append("svg")
 var link = svg.append("g").selectAll(".link"),
     node = svg.append("g").selectAll(".node");
 
-d3.json("./flare.json", function(error, classes) {
+d3.json("https://raw.githubusercontent.com/dev-a/Circle/main/flare.json", function(error, classes) {
   
-//d3.json("https://raw.githubusercontent.com/dev-a/circle/main/d3jsmall.json", function(error, classes) {
 
-//d3.json("https://raw.githubusercontent.com/dev-a/circle/main/d3jscrypto.json", function(error, classes) {
-//d3.json("d3jscrypto.json", function(error, classes) {
   if (error) throw error;
 
   var root = packageHierarchy(classes)
